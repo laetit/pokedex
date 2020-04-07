@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ContentPokedex, HeaderPokedex, ContentSearch } from './Pokedex.style';
 import { requestPokeApi } from '../../service/getPokemonData';
+import PokeCard from '../../components/PokeCard/PokeCard';
 
 const Pokedex = () => {
 
@@ -21,6 +22,7 @@ const Pokedex = () => {
                     <button>Go</button>
                 </ContentSearch>
             </HeaderPokedex>
+            <PokeCard/>
         </ContentPokedex>
     )
 }

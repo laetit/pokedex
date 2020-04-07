@@ -25,9 +25,9 @@ export const GlobalStyle = createGlobalStyle`
     input, select {
         color: ${themeColor.text};
         background-color: transparent;
-        border: 1px solid ${themeColor.secondary};
+        border: 2px solid ${themeColor.secondary};
         border-radius: 10px;
-        padding: .2em;
+        padding: .4em;
     }
 
     input:hover, select:hover {
@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${themeColor.secondary};
         color: ${themeColor.lightText};
         border-radius: 10px;
-        padding: .2em .6em;
+        padding: .4em .6em;
     }
 
     button:hover {
