@@ -1,13 +1,3 @@
-
-export const themeColor = {
-    default: "#e6b462",
-    secondary: "#5a3929",
-    hover: "#73524a",
-    active: "#ffe68b",
-    text: "#73524a",
-    lightText: "#e6b462"
-}
-
 export const typeColor = {
     bug: {
         light: "#C6D16E",

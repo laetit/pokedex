@@ -1,3 +1,1 @@
-import PokeCard from './PokeCard';
-
-export default PokeCard;
+export { default } from './pokeCard'
