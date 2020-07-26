@@ -13,8 +13,6 @@ const PokeCard = ({ name }) => {
 
     if (error) return "An error has occurred: " + error.message
 
-    console.log(res)
-
     return (
         <CardContainer type={typeColor[res.types[0].type.name]}>
             <h4>{res.order}</h4>

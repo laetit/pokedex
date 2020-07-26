@@ -1,7 +1,7 @@
 import { HOST } from '../utils/endpoints';
 
-export const fetchGeneration = (generation) => {
-    return fetch(HOST + `pokedex/${generation}/`, {
+export const fetchPokedex = (pokedex) => {
+    return fetch(HOST + `pokedex/${pokedex}/`, {
         method: 'GET'
     }).then(response => response.json())
 }
