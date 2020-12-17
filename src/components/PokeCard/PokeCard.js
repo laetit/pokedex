@@ -4,7 +4,6 @@ import { PokeBallLoading } from '../../components/loading'
 import { fetchPokemonProfile } from '../../api'
 import { typeColor } from '../../style'
 import { capitalize } from '../../utils/string'
-import NormalLoadingGif from '../../assets/normal-loading.gif'
 import { CardContainer } from './PokeCard.style'
 
 const PokeCard = ({ name }) => {

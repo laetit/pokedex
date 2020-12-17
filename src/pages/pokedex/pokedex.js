@@ -1,25 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useQuery } from 'react-query'
-import { Loading } from '../../components/loading'
-import PokeCard from '../../components/PokeCard'
-import { fetchPokedex } from '../../api'
-import { PokeList } from './pokedex.style'
+import { Loading } from 'components/loading'
+import PokeFilter from 'components/PokeFilter'
+import PokeCardContainer from 'components/PokeCardContainer'
+import { capitalize } from 'utils/string'
+import { fetchGenerations } from 'api'
 
-const Pokedex = ({ ger }) => {
+const Pokedex = () => {
+  const minGeneration = 2
+  const maxGeneration = 15
+  const [generation, setGeneration] = useState(2)
+  const { isLoading, error, data: res } = useQuery(`fetch-generation`, () => fetchGenerations())
 
-    const { isLoading, error, data: res } = useQuery(`fetch-pokedex-${ger}`, () => fetchPokedex(ger))
+  if (isLoading) return <Loading />
 
-    if (isLoading) return <Loading />
+  if (error) return "An error has occurred: " + error.message
 
-    if (error) return "An error has occurred: " + error.message
-
-    return (
-        <PokeList>
-            {res.pokemon_entries.map(pokemon => {
-                return <PokeCard name={pokemon.pokemon_species.name} />
-            })}
-        </PokeList>
-    )
+  return (
+    <div>
+      <PokeFilter />
+      {res.results.map((gen, idx) => {
+        if (idx >= minGeneration && idx <= maxGeneration) {
+          return <div key={idx} onClick={() => setGeneration(idx)}>
+            <h4>{capitalize(gen.name)}</h4>
+          </div>
+        }
+      })}
+      <PokeCardContainer ger={generation} />
+    </div>
+  )
 }
 
 export default Pokedex
