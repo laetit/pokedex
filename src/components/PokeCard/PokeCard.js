@@ -4,14 +4,15 @@ import { PokeBallLoading } from '../../components/loading'
 import { fetchPokemonProfile } from '../../api'
 import { typeColor } from '../../style'
 import { capitalize } from '../../utils/string'
-import { CardContainer } from './pokeCard.style'
+import NormalLoadingGif from '../../assets/normal-loading.gif'
+import { CardContainer } from './PokeCard.style'
 
 const PokeCard = ({ name }) => {
     const { isLoading, error, data: res } = useQuery(`fetch-${name}`, () => fetchPokemonProfile(name))
 
     if (isLoading) return <PokeBallLoading />
 
-    if (error) return "An error has occurred: " + error.message
+    if (error) return "An error has occurred: " + error.message //TODO: desenvolver componente para erro 
 
     return (
         <CardContainer type={typeColor[res.types[0].type.name]}>
