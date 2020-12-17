@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useQuery } from 'react-query'
 import { Loading } from '../../components/loading'
-import PokeCard from '../../components/pokeCard'
-import { fetchPokedex, fetchGenerations } from '../../api'
+import PokeCard from '../../components/PokeCard'
+import { fetchPokedex } from '../../api'
 import { PokeList } from './pokedex.style'
 
 const Pokedex = ({ ger }) => {

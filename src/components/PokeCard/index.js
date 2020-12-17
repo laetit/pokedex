@@ -1,1 +1,1 @@
-export { default } from './pokeCard'
+export { default } from './PokeCard'
