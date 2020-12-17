@@ -5,7 +5,7 @@ import PokeFilter from 'components/PokeFilter'
 import PokeCardContainer from 'components/PokeCardContainer'
 import { fetchGenerations } from 'api'
 
-const Pokedex = () => {
+const Pokedex = ({ pokemonSelected }) => {
   const { isLoading, error, data: res } = useQuery(`fetch-generation`, () => fetchGenerations())
   const [generation, setGeneration] = useState('kanto')
 

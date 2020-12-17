@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import Pokedex from './pages/Pokedex'
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import PokeMenu from 'components/PokeMenu'
+import Routes from 'routes'
 
-const App = () => {
-    const [pokemonSelected, setPokemonSelected] = useState('')
+const App = () => (
+    <Router>
+        <PokeMenu />
+        <Routes />
+    </Router>
+)
 
-    return (
-        <>
-            {pokemonSelected ? <div>{pokemonSelected}</div> : <Pokedex pokemonSelected={setPokemonSelected} />}
-        </>
-    )
-}
 
 export default App

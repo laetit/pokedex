@@ -30,9 +30,9 @@ export const typeColor = {
         dark: "#7D1F1A"
     },
     fire: {
-        light: "#F5AC78",
-        default: "#F08030",
-        dark: "#9C531F"
+        light: "#EC8484",
+        default: "#E24242",
+        dark: "#932B2B"
     },
     flying: {
         light: "#C6B7F5",
