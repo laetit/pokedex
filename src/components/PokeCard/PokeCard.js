@@ -1,9 +1,9 @@
 import React from 'react'
 import { useQuery } from 'react-query'
-import { PokeBallLoading } from '../../components/loading'
-import { fetchPokemonProfile } from '../../api'
-import { typeColor } from '../../style'
-import { capitalize } from '../../utils/string'
+import { PokeBallLoading } from 'components/loading'
+import { fetchPokemonProfile } from 'api'
+import { typeColor } from 'style'
+import { capitalize } from 'utils/string'
 import { CardContainer } from './PokeCard.style'
 
 const PokeCard = ({ name }) => {

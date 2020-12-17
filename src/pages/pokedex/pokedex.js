@@ -3,14 +3,11 @@ import { useQuery } from 'react-query'
 import { Loading } from 'components/loading'
 import PokeFilter from 'components/PokeFilter'
 import PokeCardContainer from 'components/PokeCardContainer'
-import { capitalize } from 'utils/string'
 import { fetchGenerations } from 'api'
 
 const Pokedex = () => {
-  const minGeneration = 2
-  const maxGeneration = 15
-  const [generation, setGeneration] = useState(2)
   const { isLoading, error, data: res } = useQuery(`fetch-generation`, () => fetchGenerations())
+  const [generation, setGeneration] = useState('kanto')
 
   if (isLoading) return <Loading />
 
@@ -18,14 +15,7 @@ const Pokedex = () => {
 
   return (
     <div>
-      <PokeFilter />
-      {res.results.map((gen, idx) => {
-        if (idx >= minGeneration && idx <= maxGeneration) {
-          return <div key={idx} onClick={() => setGeneration(idx)}>
-            <h4>{capitalize(gen.name)}</h4>
-          </div>
-        }
-      })}
+      <PokeFilter generations={res.results} onSelectedGeneration={setGeneration} />
       <PokeCardContainer ger={generation} />
     </div>
   )

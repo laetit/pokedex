@@ -1,8 +1,8 @@
 import React from 'react'
 import { useQuery } from 'react-query'
-import { Loading } from '../../components/loading'
-import PokeCard from '../../components/PokeCard'
-import { fetchPokedex } from '../../api'
+import { Loading } from 'components/loading'
+import PokeCard from 'components/PokeCard'
+import { fetchPokedex } from 'api'
 import { PokeList } from './PokeCardContainer.style'
 
 const PokeCardContainer = ({ ger }) => {
