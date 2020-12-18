@@ -18,7 +18,7 @@ const PokeCard = ({ name }) => {
 
     return (
         <CardContainer onClick={() => history.push(`${URLS.POKEMON}${name}`)} type={typeColor[res.types[0].type.name]}>
-            <h4>{res.order}</h4>
+            <h4>{res.id}</h4>
             <img src={res.sprites.front_default} />
             <h4>{capitalize(name)}</h4>
         </CardContainer>

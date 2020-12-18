@@ -3,9 +3,13 @@ import { useQuery } from 'react-query'
 import { Loading } from 'components/loading'
 import PokeFilter from 'components/PokeFilter'
 import PokeCardContainer from 'components/PokeCardContainer'
+import { setPokeType } from 'utils/layout'
 import { fetchGenerations } from 'api'
 
-const Pokedex = () => {
+const Generation = () => {
+
+  setPokeType('')
+
   const { isLoading, error, data: res } = useQuery(`fetch-generation`, () => fetchGenerations())
   const [generation, setGeneration] = useState('kanto')
 
@@ -21,4 +25,4 @@ const Pokedex = () => {
   )
 }
 
-export default Pokedex
+export default Generation

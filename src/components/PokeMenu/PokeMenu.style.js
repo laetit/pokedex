@@ -7,10 +7,15 @@ export const ContentPokeMenu = styled.div`
   right: 0;
   overflow: visible;
   display: flex;
-  background-color: #f5f5f5;
-  color: #9E9E9E;
+  background-color: ${({pokeType}) => pokeType.dark || '#fff'};
+  color: ${({pokeType}) => pokeType.light || '#000'};
   padding: 12px 30px;
-  box-shadow: 2px 7px 7px #e0e0e0;
+  border: 1px solid ${({pokeType}) => pokeType.light || '#000'};
+
+  h1 {
+    margin: 0;
+    font-size: x-large;
+  }
 
   img {
     width: 30px;
