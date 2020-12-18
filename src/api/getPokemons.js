@@ -11,3 +11,9 @@ export const fetchPokemonProfile = (pokemon) => {
         method: 'GET'
     }).then(response => response.json())
 }
+
+export const fetchPokemonSpecie = (pokemon) => {
+    return fetch(HOST + `pokemon-species/${pokemon}/`, {
+        method: 'GET',
+    }).then(response => response.json())
+}

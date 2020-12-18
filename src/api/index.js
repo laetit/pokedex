@@ -1,2 +1,2 @@
-export { fetchPokedex, fetchPokemonProfile } from './getPokemons'
+export { fetchPokedex, fetchPokemonProfile, fetchPokemonSpecie } from './getPokemons'
 export { fetchGenerations } from './getGenerations'

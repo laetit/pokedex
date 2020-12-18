@@ -11,11 +11,6 @@ export const PokemonContent = styled.div`
   background-color: ${() => typeColor[getPokeType()].dark};
   color: ${() => typeColor[getPokeType()].light};
 
-  h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-  }
-
   @media(max-width: 800px) {
     overflow: hidden;
     padding-top: 40px;
@@ -28,6 +23,11 @@ export const PokemonApresentation = styled.div`
   margin: auto;
   padding: 30px;
   font-style: italic;
+
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+  }
 
   h2 {
     font-size: 56px;
@@ -51,7 +51,7 @@ export const PokemonApresentation = styled.div`
 
   img {
     z-index: 2;
-    margin: 0 5em;
+    margin-left: 5em;
     height: 300px;
 
     @media(max-width: 800px) {
@@ -61,6 +61,13 @@ export const PokemonApresentation = styled.div`
 
   @media(max-width: 800px){
     flex-direction: column-reverse;
+  }
+`
+
+export const PokemonDescription = styled.div`
+  max-width: 200px;
+  span+span {
+    margin-left: 10px;
   }
 `
 
