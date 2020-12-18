@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
     border-radius: 12px;
     padding: 4px;
     margin: 4px;
-    background: ${props => props.type.light};
+    background-color: ${props => props.type.light};
     color: ${props => props.type.dark};
     border: 1px solid ${props => props.type.dark};
 

@@ -19,5 +19,9 @@ export const ContentPokeFilter = styled.div`
       margin: 0;
       margin-bottom: 16px;
     }
+
+    select {
+      color: #9E9E9E;
+    }
   }
 `

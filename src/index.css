@@ -1,21 +1,18 @@
-@font-face {
-  font-family: 'Pokemon Font';
-  src: local('Pokemon Font'), url(assets/font/PokemonHollowNormal-pyPZ.ttf) format('truetype');
-};
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#root {
+  display: flex;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-h1, h2, h3 {
-  font-family: 'Pokemon Font';
 }
 
 input, select {
